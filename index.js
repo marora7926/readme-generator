@@ -1,7 +1,7 @@
 // Pckages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // Array of questions for user input
 inquirer
@@ -38,12 +38,12 @@ inquirer
     },
     {
         type: 'input',
-        name: 'user-story',
+        name: 'userStory',
         message: 'What does the user need to know about your using this repo (user story?',
     },
     {
         type: 'input',
-        name: 'accept-criteria',
+        name: 'acceptCriteria',
         message: 'What is the acceptance criteria for this project?',
     },
     {
@@ -56,7 +56,7 @@ inquirer
         type: 'input',
         name: 'test',
         message: 'What command should be run to run tests?',
-        defualt: "npm test",
+        default: "npm test",
     },
     {
         type: 'checkbox',
@@ -66,13 +66,13 @@ inquirer
     },
     {
         type: 'input',
-        name: 'deployed-link',
+        name: 'deployedLink',
         message: 'Enter your deployed URL:',
     },
     {
         type: 'input',
         name: 'wireframe',
-        message: 'Enter your wireframe/brnaching tree link:',
+        message: 'Enter your wireframe/branching tree link:',
     },
     {
         type: 'input',
@@ -82,17 +82,17 @@ inquirer
     {
         type: 'input',
         name: 'github',
-        message: 'Enter your GitHub Username',
+        message: 'Enter your GitHub link',
     },
   ])
-//   this will return a promise 
+    //   this will return a promise 
   .then((answers) => {
     const readMeContent = generateMarkdown(answers); //this is our generateMarkdown method, which will return a template of string using our template.
     fs.writeToFile("./assets/readme/README.md", readMeContent, (err) => err // using file system to write our readme file and also added an call back function, error.
         ? console.log(err)
         : console.log("Successfully generated README.md!")
     );
-  });
+});
 
 
 // // Function to write README file
