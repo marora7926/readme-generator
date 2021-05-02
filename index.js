@@ -88,18 +88,8 @@ inquirer
     //   this will return a promise 
   .then((answers) => {
     const readMeContent = generateMarkdown(answers); //this is our generateMarkdown method, which will return a template of string using our template.
-    fs.writeToFile("./assets/readme/README.md", readMeContent, (err) => { err // using file system to write our readme file and also added an call back function, error.
+    fs.writeFile("./assets/readme/README.md", readMeContent, (err) => { err // using file system to write our readme file and also added an call back function, error.
         ? console.log(err)
         : console.log("Successfully generated README.md!")
     });
 });
-
-
-// // Function to write README file
-// function writeToFile(fileName, data) {}
-
-// // Function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();

@@ -1,6 +1,10 @@
-// // TODO: Create a function that returns a license badge based on which license is passed in
-// // If there is no license, return an empty string
-// function renderLicenseBadge(license) {}
+// Function that returns a license badge based on which license is passed in
+function renderLicenseBadge(license) {
+  if (license === "None") {
+    return `![Github License]((https://img.shields.io/badge/license-${license}-yellowgreen.svg))`
+  }
+  return ``
+}
 
 // // TODO: Create a function that returns the license link
 // // If there is no license, return an empty string
@@ -31,53 +35,44 @@ ${answers.intro}
     \`\`\`
 
 ## What was your motivation?
-\`\`\`
-${answers.motivation}
-\`\`\`
+    \`\`\`
+    ${answers.motivation}
+    \`\`\`
 
 ## User Story
-\`\`\`
-${answers.userStory}
-\`\`\`
+    \`\`\`
+    ${answers.userStory}
+    \`\`\`
 
 ## Acceptance Criteria
-\`\`\`
-${answers.acceptCriteria}
-\`\`\`
+    \`\`\`
+    ${answers.acceptCriteria}
+    \`\`\`
 
 ## Dependencies installation
-\`\`\`
-${answers.dependencies}
-\`\`\`
+    \`\`\`
+    To install dependencies, run these commands: ${answers.dependencies}
+    \`\`\`
 
 ## License/s required
-\`\`\`
-${answers.license}
-\`\`\`
+    \`\`\`
+    ${answers.license}
+    \`\`\`
 
 ## Test/s to run commands
-\`\`\`
-${answers.test}
-\`\`\`
+    \`\`\`
+    ${answers.test}
+    \`\`\`
 
 ## Technologies used
-\`\`\`
-${answers.tech}
-// Add destructuring
-// const {a, b, c, d, e, f} = inquirer.prompt.choices
-// * console.log(a)
-// * console.log(b)
-// * console.log(c)
-// * console.log(d)
-// * console.log(e)
-// * console.log(f)
-
-\`\`\`
+    \`\`\`
+    The following technologies are used: ${answers.tech}
+    \`\`\`
 
 ## Deployed URL
-\`\`\`
-${answers.deployedLink}
-\`\`\`
+    \`\`\`
+    Click the link to visit the deployed webpage: ${answers.deployedLink}
+    \`\`\`
 
 ## Wireframe/branching tree
 ![Wireframe](${answers.wireframe})
