@@ -63,6 +63,15 @@ ${answers.test}
 ## Technologies used
 \`\`\`
 ${answers.tech}
+// Add destructuring
+// const {a, b, c, d, e, f} = inquirer.prompt.choices
+// * console.log(a)
+// * console.log(b)
+// * console.log(c)
+// * console.log(d)
+// * console.log(e)
+// * console.log(f)
+
 \`\`\`
 
 ## Deployed URL
