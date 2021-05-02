@@ -13,9 +13,11 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `# ${answers.title} ${answers.version}
+
 ${answers.intro}
 
 ## Table of contents
+    \`\`\`
     * [Motivation](#what-was-your-motivation?)
     * [User Story](#user-story)
     * [Acceptance Criteria](#acceptance-criteria)
@@ -26,31 +28,56 @@ ${answers.intro}
     * [Deployed URL](#deployed-url)
     * [Wireframe/branching tree](#wireframe/branching-tree)
     * [Screenshot landing page](#screenshot-landing-page)
+    \`\`\`
 
 ## What was your motivation?
+\`\`\`
+${answers.motivation}
+\`\`\`
+
 ## User Story
+\`\`\`
+${answers.user-story}
+\`\`\`
+
 ## Acceptance Criteria
+\`\`\`
+${answers.accept-criteria}
+\`\`\`
+
 ## Dependencies installation
+\`\`\`
+${answers.dependencies}
+\`\`\`
+
 ## License/s required
+\`\`\`
+${answers.license}
+\`\`\`
+
 ## Test/s to run commands
+\`\`\`
+${answers.test}
+\`\`\`
+
 ## Technologies used
+\`\`\`
+${answers.tech}
+\`\`\`
+
 ## Deployed URL
+\`\`\`
+${answers.deployed-link}
+\`\`\`
+
 ## Wireframe/branching tree
+![Wireframe](./assets/images/wireframe-${answers.title}.png)
+
 ## Screenshot landing page
+![Landing Page](./assets/images/${answers.title}-landing-page.png)
 
 ---
-© 2021 [${answers.name}](${answers.github}) Confidential and Proprietary. All Rights Reserved
-
-
-
-
-
-
-
-
-
-
-  `;
+© 2021 [${answers.name}](${answers.github}) Confidential and Proprietary. All Rights Reserved`;
 }
 
 module.exports = generateMarkdown;
