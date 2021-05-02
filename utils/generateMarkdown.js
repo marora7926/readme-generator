@@ -62,7 +62,7 @@ ${answers.intro}
     To install dependencies, run these commands: ${answers.dependencies}
     \`\`\`
     
-${renderLicenseBadge(answers.license)}
+${renderLicenseSection(answers.license)}
 
 ## Test/s to run commands :white_check_mark:
     \`\`\`
