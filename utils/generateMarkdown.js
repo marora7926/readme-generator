@@ -1,7 +1,7 @@
 // Function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if (license === "None") {
-    return `![Github License]((https://img.shields.io/badge/license-${license}-yellowgreen.svg))`
+    return `![Github License]((https://img.shields.io/badge/license-${license}-success.svg))`
   }
   return ``
 }
@@ -10,17 +10,26 @@ function renderLicenseBadge(license) {
 // // If there is no license, return an empty string
 // function renderLicenseLink(license) {}
 
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(license) {}
+// Function that returns the license section of README
+function renderLicenseSection(license) {
+  if (license === "None") {
+    return (
+      `## License/s required :white_check_mark:
+      \`\`\`
+      This work has been licensed under the ${answers.license}
+      \`\`\``
+    )}
+  return ``
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `# ${answers.title} ${answers.version}
-
+  ${renderLicenseBadge(answers.license)}
+  
 ${answers.intro}
 
-## Table of contents
+## Table of contents :point_down:
 
     * [Motivation](#what-was-your-motivation?)
     * [User Story](#user-story)
@@ -33,7 +42,7 @@ ${answers.intro}
     * [Wireframe/branching tree](#wireframe/branching-tree)
     * [Screenshot landing page](#screenshot-landing-page)
 
-## What was your motivation?
+## What was your motivation? :thumbsup:
     \`\`\`
     ${answers.motivation}
     \`\`\`
@@ -43,32 +52,29 @@ ${answers.intro}
     ${answers.userStory}
     \`\`\`
 
-## Acceptance Criteria
+## Acceptance Criteria :book:
     \`\`\`
     ${answers.acceptCriteria}
     \`\`\`
 
-## Dependencies installation
+## Dependencies installation :white_check_mark:
     \`\`\`
     To install dependencies, run these commands: ${answers.dependencies}
     \`\`\`
+    
+${renderLicenseBadge(answers.license)}
 
-## License/s required
-    \`\`\`
-    ${renderLicenseBadge(answers.license)}
-    \`\`\`
-
-## Test/s to run commands
+## Test/s to run commands :white_check_mark:
     \`\`\`
     ${answers.test}
     \`\`\`
 
-## Technologies used
+## Technologies used :computer:
     \`\`\`
     The following technologies are used: ${answers.tech}
     \`\`\`
 
-## Deployed URL
+## Deployed URL :link:
     \`\`\`
     Click the link to visit the deployed webpage: ${answers.deployedLink}
     \`\`\`
