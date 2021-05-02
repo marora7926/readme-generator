@@ -1,4 +1,4 @@
-// Function that returns a license badge based on which license is passed in
+// Function that returns a license badge based on which license is passed in (in the header section of the readme file)
 function renderLicenseBadge(license) {
   if (license === "None") {
     return `![Github License]((https://img.shields.io/badge/license-${license}-success.svg))`
@@ -6,11 +6,16 @@ function renderLicenseBadge(license) {
   return ``
 }
 
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
+// Function that returns the license link for content of tables
+function renderLicenseLink(license) {
+  if (license === "None") {
+    return (
+    `\n [License](#license)\n`
+  )}
+  return ``
+}
 
-// Function that returns the license section of README
+// Function that returns the license section of README main section
 function renderLicenseSection(license) {
   if (license === "None") {
     return (
@@ -35,7 +40,7 @@ ${answers.intro}
     * [User Story](#user-story)
     * [Acceptance Criteria](#acceptance-criteria)
     * [Dependencies Installation](#dependencies-installation)
-    * [License/s required](#license/s-required)
+    * ${renderLicenseLink(answers.license)}
     * [Test/s to run commands](#test/s-to-run-commands)
     * [Technologies used](#technologies-used)
     * [Deployed URL](#deployed-url)

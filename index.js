@@ -22,9 +22,10 @@ inquirer
         message: 'What is the project version (if applicable, otherwise write v1.0)?',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
-        message: 'What licence/s does the project have?',
+        message: 'What licence do the project have?',
+        choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"]
     },
     {
         type: 'input',
