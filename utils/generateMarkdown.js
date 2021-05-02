@@ -21,7 +21,7 @@ function generateMarkdown(answers) {
 ${answers.intro}
 
 ## Table of contents
-    \`\`\`
+
     * [Motivation](#what-was-your-motivation?)
     * [User Story](#user-story)
     * [Acceptance Criteria](#acceptance-criteria)
@@ -32,14 +32,13 @@ ${answers.intro}
     * [Deployed URL](#deployed-url)
     * [Wireframe/branching tree](#wireframe/branching-tree)
     * [Screenshot landing page](#screenshot-landing-page)
-    \`\`\`
 
 ## What was your motivation?
     \`\`\`
     ${answers.motivation}
     \`\`\`
 
-## User Story
+## User Story :scroll:
     \`\`\`
     ${answers.userStory}
     \`\`\`
@@ -56,7 +55,7 @@ ${answers.intro}
 
 ## License/s required
     \`\`\`
-    ${answers.license}
+    ${renderLicenseBadge(answers.license)}
     \`\`\`
 
 ## Test/s to run commands

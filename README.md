@@ -8,7 +8,7 @@ I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
 ```
 
-## Acceptance Criteria
+## Acceptance Criteria :scroll:
 
 ```md
 GIVEN a command-line application that accepts user input
@@ -28,12 +28,12 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
 
-## Technologies used
-```
+## Technologies used 
+
   1. Node js
   2. npm
-  3. [Inquirer package](https://www.npmjs.com/package/inquirer)
-```
+  3. [Inquirer](https://www.npmjs.com/package/inquirer)
+
 
 ## Repository Link
 https://github.com/marora7926/readme-generator
