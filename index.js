@@ -7,45 +7,62 @@ const generateMarkdown = require('./utils/generateMarkdown');
 inquirer
   .prompt([
     {
+        type: 'input',
+        name: 'name',
+        message: 'What is your name?',
+      },
+    {
       type: 'input',
-      name: 'project-name',
+      name: 'title',
       message: 'What is your project name?',
     },
     {
         type: 'input',
-        name: 'project-version',
+        name: 'version',
         message: 'What is the project version (if applicable, otherwise write v1.0)?',
     },
     {
         type: 'input',
-        name: 'brief-introduction',
+        name: 'license',
+        message: 'What licence/s does the project have?',
+    },
+    {
+        type: 'input',
+        name: 'intro',
         message: 'Explain briefly, what is this project about?',
     },
     {
         type: 'input',
         name: 'motivation',
-        message: 'What is your motivation ofr this project?',
+        message: 'What is your motivation for this project?',
     },
     {
         type: 'input',
         name: 'user-story',
-        message: 'What is the user story?',
+        message: 'What does the user need to know about your using this repo (user story?',
     },
     {
         type: 'input',
-        name: 'acceptance-criteria',
+        name: 'accept-criteria',
         message: 'What is the acceptance criteria for this project?',
+    },
+    {
+        type: 'input',
+        name: 'dependencies',
+        message: 'What command should be run to install dependencies?',
+        default: "npm i",
+    },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'What command should be run to run tests?',
+        defualt: "npm test",
     },
     {
         type: 'checkbox',
         name: 'tech',
         message: 'What technologies were used for this project?',
         choices: ["HTML", "CSS", "Bootstrap", "JavaScript", "Node", "NPM"]
-    },
-    {
-        type: 'input',
-        name: 'license',
-        message: 'What licence/s does the project have?',
     },
     {
         type: 'input',
@@ -82,10 +99,7 @@ inquirer
 // function writeToFile(fileName, data) {}
 
 // // Function to initialize app
-// function init() {
-//     inquirer
-//         .prompt(questions)
-// }
+// function init() {}
 
 // // Function call to initialize app
 // init();
