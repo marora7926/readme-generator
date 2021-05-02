@@ -67,6 +67,16 @@ inquirer
     },
     {
         type: 'input',
+        name: 'gUsername',
+        message: 'What is your github id?',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email id?',
+    },
+    {
+        type: 'input',
         name: 'deployedLink',
         message: 'Enter your deployed URL:',
     },

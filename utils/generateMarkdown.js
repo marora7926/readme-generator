@@ -79,6 +79,12 @@ ${renderLicenseSection(answers.license)}
     The following technologies are used: ${answers.tech}
     \`\`\`
 
+## Contact me :link:
+    \`\`\`
+    Link to my Github profile: ${answers.gUsername}
+    Reach me with additional questions: ${answers.email}  
+    \`\`\`
+
 ## Deployed URL :link:
     \`\`\`
     Click the link to visit the deployed webpage: ${answers.deployedLink}
