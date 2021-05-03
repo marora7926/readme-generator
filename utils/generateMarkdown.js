@@ -79,7 +79,7 @@ ${renderLicenseSection(answers.license)}
 
 ## Test/s to run commands :white_check_mark:
 \`\`\`
-**${answers.test}**
+${answers.test}
 \`\`\`
 
 
