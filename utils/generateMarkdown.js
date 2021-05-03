@@ -9,7 +9,7 @@ function renderLicenseBadge(license) {
 // Function that returns the license link for content of tables
 function renderLicenseLink(license) {
   if (license !== "None") {
-    return (`* [License](#license)`)
+    return (`* [License](#licenses-required-white_check_mark)`)
   }
   return ``
 }

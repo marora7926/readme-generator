@@ -12,7 +12,7 @@ This website will help users to learn magic
 * [User Story](#user-story-scroll)
 * [Acceptance Criteria](#acceptance-criteria-book)
 * [Dependencies installation](#dependencies-installation-white_check_mark)
-* [License](#license)
+* [License](#licenses-required-white_check_mark)
 * [Test/s to run commands](#tests-to-run-commands-white_check_mark)
 * [Technologies used](#technologies-used-computer)
 * [Contact me](#contact-me-link)
