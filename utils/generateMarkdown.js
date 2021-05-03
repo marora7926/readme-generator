@@ -1,103 +1,119 @@
 // Function that returns a license badge based on which license is passed in (in the header section of the readme file)
 function renderLicenseBadge(license) {
-  if (license === "None") {
-    return `![Github License]((https://img.shields.io/badge/license-${license}-success.svg))`
+  if (license !== "None") {
+    return `![Github License](https://img.shields.io/badge/license-${license}-success.svg)`
   }
   return ``
 }
 
 // Function that returns the license link for content of tables
 function renderLicenseLink(license) {
-  if (license === "None") {
-    return (
-    `\n [License](#license)\n`
-  )}
+  if (license !== "None") {
+    return (`* [License](#license)`)
+  }
   return ``
 }
 
 // Function that returns the license section of README main section
 function renderLicenseSection(license) {
-  if (license === "None") {
-    return (
-      `## License/s required :white_check_mark:
-      \`\`\`
-      This work has been licensed under the ${answers.license}
-      \`\`\``
-    )}
-  return ``
+if (license !== "None") {
+return (
+`## License/s required :white_check_mark:
+\`\`\`
+This work has been licensed under the ${license}
+\`\`\``
+)}
+return ``
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `# ${answers.title} ${answers.version}
-  ${renderLicenseBadge(answers.license)}
-  
+
+${renderLicenseBadge(answers.license)}
+
+\`\`\`
 ${answers.intro}
+\`\`\`
 
 ## Table of contents :point_down:
 
-    * [Motivation](#what-was-your-motivation?)
-    * [User Story](#user-story)
-    * [Acceptance Criteria](#acceptance-criteria)
-    * [Dependencies Installation](#dependencies-installation)
-    * ${renderLicenseLink(answers.license)}
-    * [Test/s to run commands](#test/s-to-run-commands)
-    * [Technologies used](#technologies-used)
-    * [Deployed URL](#deployed-url)
-    * [Wireframe/branching tree](#wireframe/branching-tree)
-    * [Screenshot landing page](#screenshot-landing-page)
+* [What was your motivation?](#what-was-your-motivation-thumbsup)
+* [User Story](#user-story-scroll)
+* [Acceptance Criteria](#acceptance-criteria-book)
+* [Dependencies installation](#dependencies-installation-white_check_mark)
+${renderLicenseLink(answers.license)}
+* [Test/s to run commands](#tests-to-run-commands-white_check_mark)
+* [Technologies used](#technologies-used-computer)
+* [Contact me](#contact-me-link)
+* [Deployed URL](#deployed-url-link)
+* [Wireframe/branching tree](#wireframebranching-tree)
+* [Screenshot landing page](#screenshot-landing-page)
 
 ## What was your motivation? :thumbsup:
-    \`\`\`
-    ${answers.motivation}
-    \`\`\`
+\`\`\`
+${answers.motivation}
+\`\`\`
+
 
 ## User Story :scroll:
-    \`\`\`
-    ${answers.userStory}
-    \`\`\`
+\`\`\`
+${answers.userStory}
+\`\`\`
+
 
 ## Acceptance Criteria :book:
-    \`\`\`
-    ${answers.acceptCriteria}
-    \`\`\`
+\`\`\`
+${answers.acceptCriteria}
+\`\`\`
+
 
 ## Dependencies installation :white_check_mark:
-    \`\`\`
-    To install dependencies, run these commands: ${answers.dependencies}
-    \`\`\`
-    
+\`\`\`
+To install dependencies, run these commands: ${answers.dependencies}
+\`\`\`
+
+
 ${renderLicenseSection(answers.license)}
 
+
 ## Test/s to run commands :white_check_mark:
-    \`\`\`
-    ${answers.test}
-    \`\`\`
+\`\`\`
+**${answers.test}**
+\`\`\`
+
 
 ## Technologies used :computer:
-    \`\`\`
-    The following technologies are used: ${answers.tech}
-    \`\`\`
+\`\`\`
+The following technologies are used: ${answers.tech}
+\`\`\`
+
 
 ## Contact me :link:
-    \`\`\`
-    Link to my Github profile: ${answers.gUsername}
-    Reach me with additional questions: ${answers.email}  
-    \`\`\`
+
+* Link to my GitHub profile: [${answers.name} profile](https://github.com/${answers.gUsername})
+
+* Visit my GitHub repo: [Repo](https://github.com/${answers.gUsername}/${answers.title})
+
+* Reach me with additional questions: ${answers.email} 
+
 
 ## Deployed URL :link:
-    \`\`\`
-    Click the link to visit the deployed webpage: ${answers.deployedLink}
-    \`\`\`
+
+Click the link to visit the deployed webpage: https://${answers.gUsername}.github.io/${answers.title}/
+
 
 ## Wireframe/branching tree
-![Wireframe](${answers.wireframe})
+
+![Wireframe](/assets/images/wireframe-${answers.title}.png)
+
 
 ## Screenshot landing page
-![Landing Page](${answers.screenshot})
+
+![Landing Page](/assets/images/${answers.title}-landing-page.png)
 
 ---
-© 2021 [${answers.name}](${answers.github}) Confidential and Proprietary. All Rights Reserved`;
+© 2021 [${answers.name}](https://github.com/${answers.gUsername}) Confidential and Proprietary. All Rights Reserved`;
 }
 
 module.exports = generateMarkdown;

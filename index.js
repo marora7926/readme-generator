@@ -14,7 +14,7 @@ inquirer
     {
         type: 'input',
         name: 'title',
-        message: 'What is your project name?',
+        message: 'What is your project name? (add a hypen if more than one word)',
     },
     {
         type: 'input',
@@ -75,28 +75,8 @@ inquirer
         name: 'email',
         message: 'What is your email id?',
     },
-    {
-        type: 'input',
-        name: 'deployedLink',
-        message: 'Enter your deployed URL:',
-    },
-    {
-        type: 'input',
-        name: 'wireframe',
-        message: 'Enter your wireframe/branching tree link:',
-    },
-    {
-        type: 'input',
-        name: 'screenshot',
-        message: 'Enter your landing page screenshot:',
-    },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'Enter your GitHub link',
-    },
   ])
-    //   this will return a promise 
+    // this will return a promise 
   .then((answers) => {
     const readMeContent = generateMarkdown(answers); //this is our generateMarkdown method, which will return a template of string using our template.
     fs.writeFile("./assets/readme/README.md", readMeContent, (err) => { err // using file system to write our readme file and also added an call back function, error.
