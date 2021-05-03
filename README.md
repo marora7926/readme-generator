@@ -39,10 +39,10 @@ THEN I am taken to the corresponding section of the README
 https://github.com/marora7926/readme-generator
 
 ## Access a sample generated README file here
-[Sample generated README FIle](https://cloudstor.aarnet.edu.au/plus/s/WVFHUwZJDv7Q6wr)
+[Sample generated README FIle](https://cloudstor.aarnet.edu.au/plus/s/ARXQ5BWJ4TDWQ7r)
 
 ## Access Walkthrough Video here
-[Walkthrough Video](https://cloudstor.aarnet.edu.au/plus/s/WVFHUwZJDv7Q6wr)
+[Walkthrough Video](https://cloudstor.aarnet.edu.au/plus/s/XYlSxV1nACTRJqM)
 
 ---
 © 2021 Mohit Arora. All Rights Reserved.
