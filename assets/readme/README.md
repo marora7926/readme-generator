@@ -3,7 +3,7 @@
 ![Github License](https://img.shields.io/badge/license-MIT-success.svg)
 
 ```
-This website will help users to learn magic
+This website will help users to learn magic tricks.
 ```
 
 ## Table of contents :point_down:
@@ -28,13 +28,13 @@ I am passionate about magic
 
 ## User Story :scroll:
 ```
-AS A USER, I would like to access the useful links for learning magic.
+AS A USER, I would like to access the useful links to learn magic
 ```
 
 
 ## Acceptance Criteria :book:
 ```
-GIVEN a learn magic website, WHEN I land on learn magic website, THEN I am presented with useful links to learn magic
+GIVEN a learn magic website, WHEN I land on the home page, THEN I am presented with useful links to lean magic tricks.
 ```
 
 
